@@ -1,5 +1,25 @@
 # IntroMachineLearning
-Homework for GitHub
+#Homework for GitHub
+#number data
+import numpy
+#data handling
+import pandas
+import matplotlib.pyplot as plt
+#data sets and classifiers
+from sklearn 
+import datasets
+from sklearn.model_selection 
+import train_test_split, KFold, cross_val_score
+from sklearn.naive_bayes 
+import GaussianNB
+from sklearn.neighbors 
+import KNeighborsClassifier
+from sklearn.linear_model 
+import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.metrics 
+import confusion_matrix, classification_report, accuracy_score
+import seaborn as sns
 
 # Load dataset
 breast_cancer = datasets.load_breast_cancer ()
