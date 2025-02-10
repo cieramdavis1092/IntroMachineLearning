@@ -37,3 +37,12 @@ def evaluate_model(model, X_train, y_train, X_test, y_test, kfold):
     plt.xlabel("Predicted")
     plt.ylabel("Actual")
     plt.show()
+
+# Cross-Validation
+scores = cross_val_score(model, X, y, cv=kfold)
+    print(f"Cross-Validation Scores: {scores}")
+    print(f"Mean CV Score: {scores.mean():.4f}")
+
+    # Evaluate all models
+for model in models.values():
+    evaluate_model(model, X_train, y_train, X_test, y_test, kfold)
