@@ -3,12 +3,13 @@ Homework for GitHub
 
 # Load dataset
 breast_cancer = datasets.load_breast_cancer ()
-X, y = breast_cancer.data, breast_cancer.target
+X = data.data
+y = data. target
 
 # Split data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Models to evaluate
+#Running Multiple Models to Find the Best One
 models = {
     'GaussianNB': GaussianNB(),
     'KNeighborsClassifier': KNeighborsClassifier(),
@@ -39,10 +40,10 @@ def evaluate_model(model, X_train, y_train, X_test, y_test, kfold):
     plt.show()
 
 # Cross-Validation
-scores = cross_val_score(model, X, y, cv=kfold)
+score = cross_value_score(model, X, y, cv=kfold)
     print(f"Cross-Validation Scores: {scores}")
     print(f"Mean CV Score: {scores.mean():.4f}")
 
     # Evaluate all models
-for model in models.values():
+for model in model.num():
     evaluate_model(model, X_train, y_train, X_test, y_test, kfold)
